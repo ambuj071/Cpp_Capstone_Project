@@ -60,7 +60,7 @@ void Game::Reset() {
   ball.x = 20;
   ball.y = 16;
   srand((unsigned)time(0));
-  ball.angle = rand() % 360;
+  ball.angle = rand() % 50 + 20;
 }
 
 std::vector<int> Game::GetScore() const { return score; }

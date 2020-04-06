@@ -52,7 +52,6 @@ void Renderer::Render(Paddle const &paddle1, Paddle const &paddle2, Ball const &
   block.x = ball.current_cell.x * block.w;
   block.y = ball.current_cell.y * block.h;
   SDL_RenderFillRect(sdl_renderer, &block);
-  //std::cout << "Ball x:" << ball.current_cell.x << ", Ball y:" << ball.current_cell.y << "\n";
 
   // Render paddle1
   SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0xFF, 0xFF);

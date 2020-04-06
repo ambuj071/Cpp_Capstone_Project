@@ -19,7 +19,6 @@ class Paddle {
   void SetSize(int size);
   int GetSize();
   void SetSpeed(float speed);
-  void SetDirection(Direction direction);
   int GetId();
 
   float head_x;

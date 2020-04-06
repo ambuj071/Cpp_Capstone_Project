@@ -2,14 +2,12 @@
 #include <iostream>
 
 void Paddle::Update() {
-  std::cout << "inside update: " << direction << "\n";
   switch (direction) {
     case Direction::kUp:
       head_y -= speed;
       break;
 
     case Direction::kDown:
-      std::cout << "Yes!!!\n";
       head_y += speed;
       break;
 
@@ -44,11 +42,6 @@ int Paddle::GetSize(){
 
 int Paddle::GetId(){
     return id;
-}
-
-void Paddle::SetDirection(Direction direction){
-    direction = direction;
-    std::cout << "Paddle0 Direction:" << direction << "\n";
 }
 
 void Paddle::SetSpeed(float new_speed){

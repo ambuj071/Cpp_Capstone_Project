@@ -18,6 +18,6 @@ int main(int argv, char** args) {
   Game game(kGridWidth, kGridHeight, paddle1_xpos, paddle2_xpos);
   game.Run(controller, renderer, kMsPerFrame);
   std::cout << "Game has terminated successfully!\n";
-  std::cout << "Score: " << game.GetScore()[0] << " " << game.GetScore()[1] << "\n";
+  std::cout << "Player1 Score: " << game.GetScore()[0] << " Player2 Score: " << game.GetScore()[1] << "\n";
   return 0;
 }
