@@ -1,14 +1,13 @@
 #include "game.h"
 #include <iostream>
 #include "SDL.h"
+#include <cstdlib>
+#include <ctime>
 
-Game::Game(std::size_t grid_width, std::size_t grid_height)
-    : snake(grid_width, grid_height),
-      engine(dev()),
-      random_w(0, static_cast<int>(grid_width)),
-      random_h(0, static_cast<int>(grid_height)) {
-  PlaceFood();
-}
+Game::Game(std::size_t grid_width, std::size_t grid_height, int x1, int x2)
+    : paddle1(0, grid_width, grid_height, x1),
+      paddle2(1, grid_width, grid_height, x2),
+      ball(grid_width, grid_height, 30){paddle1.Update(); paddle2.Update();}
 
 void Game::Run(Controller const &controller, Renderer &renderer,
                std::size_t target_frame_duration) {
@@ -23,9 +22,15 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     frame_start = SDL_GetTicks();
 
     // Input, Update, Render - the main game loop.
-    controller.HandleInput(running, snake);
-    Update();
-    renderer.Render(snake, food);
+    controller.HandleInput(running, paddle1, paddle2);
+    ball.Update(paddle1, paddle2);
+
+    int bpp = ball.PastPaddle(paddle1, paddle2);
+    if(bpp >= 0){
+        score[bpp] += 1;
+        Reset();
+    }
+    renderer.Render(paddle1, paddle2, ball);
 
     frame_end = SDL_GetTicks();
 
@@ -36,7 +41,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 
     // After every second, update the window title.
     if (frame_end - title_timestamp >= 1000) {
-      renderer.UpdateWindowTitle(score, frame_count);
+      renderer.UpdateWindowTitle(score[0], score[1]);
       frame_count = 0;
       title_timestamp = frame_end;
     }
@@ -50,38 +55,12 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   }
 }
 
-void Game::PlaceFood() {
-  int x, y;
-  while (true) {
-    x = random_w(engine);
-    y = random_h(engine);
-    // Check that the location is not occupied by a snake item before placing
-    // food.
-    if (!snake.SnakeCell(x, y)) {
-      food.x = x;
-      food.y = y;
-      return;
-    }
-  }
+void Game::Reset() {
+  SDL_Delay(3000);
+  ball.x = 20;
+  ball.y = 16;
+  srand((unsigned)time(0));
+  ball.angle = rand() % 360;
 }
 
-void Game::Update() {
-  if (!snake.alive) return;
-
-  snake.Update();
-
-  int new_x = static_cast<int>(snake.head_x);
-  int new_y = static_cast<int>(snake.head_y);
-
-  // Check if there's food over here
-  if (food.x == new_x && food.y == new_y) {
-    score++;
-    PlaceFood();
-    // Grow snake and increase speed.
-    snake.GrowBody();
-    snake.speed += 0.02;
-  }
-}
-
-int Game::GetScore() const { return score; }
-int Game::GetSize() const { return snake.size; }
+std::vector<int> Game::GetScore() const { return score; }

@@ -1,27 +1,32 @@
 [
 {
-  "directory": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Snake-Game/build",
-  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/SnakeGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\SnakeGame.dir\\src\\main.cpp.obj -c C:\\udacity_c++_nanodegree\\capstone_project\\CppND-Capstone-Snake-Game\\src\\main.cpp",
-  "file": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Snake-Game/src/main.cpp"
+  "directory": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/PongGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\PongGame.dir\\src\\main.cpp.obj -c C:\\udacity_c++_nanodegree\\capstone_project\\CppND-Capstone-Pong-Game\\src\\main.cpp",
+  "file": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/src/main.cpp"
 },
 {
-  "directory": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Snake-Game/build",
-  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/SnakeGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\SnakeGame.dir\\src\\game.cpp.obj -c C:\\udacity_c++_nanodegree\\capstone_project\\CppND-Capstone-Snake-Game\\src\\game.cpp",
-  "file": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Snake-Game/src/game.cpp"
+  "directory": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/PongGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\PongGame.dir\\src\\game.cpp.obj -c C:\\udacity_c++_nanodegree\\capstone_project\\CppND-Capstone-Pong-Game\\src\\game.cpp",
+  "file": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/src/game.cpp"
 },
 {
-  "directory": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Snake-Game/build",
-  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/SnakeGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\SnakeGame.dir\\src\\controller.cpp.obj -c C:\\udacity_c++_nanodegree\\capstone_project\\CppND-Capstone-Snake-Game\\src\\controller.cpp",
-  "file": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Snake-Game/src/controller.cpp"
+  "directory": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/PongGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\PongGame.dir\\src\\controller.cpp.obj -c C:\\udacity_c++_nanodegree\\capstone_project\\CppND-Capstone-Pong-Game\\src\\controller.cpp",
+  "file": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/src/controller.cpp"
 },
 {
-  "directory": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Snake-Game/build",
-  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/SnakeGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\SnakeGame.dir\\src\\renderer.cpp.obj -c C:\\udacity_c++_nanodegree\\capstone_project\\CppND-Capstone-Snake-Game\\src\\renderer.cpp",
-  "file": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Snake-Game/src/renderer.cpp"
+  "directory": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/PongGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\PongGame.dir\\src\\renderer.cpp.obj -c C:\\udacity_c++_nanodegree\\capstone_project\\CppND-Capstone-Pong-Game\\src\\renderer.cpp",
+  "file": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/src/renderer.cpp"
 },
 {
-  "directory": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Snake-Game/build",
-  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/SnakeGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\SnakeGame.dir\\src\\snake.cpp.obj -c C:\\udacity_c++_nanodegree\\capstone_project\\CppND-Capstone-Snake-Game\\src\\snake.cpp",
-  "file": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Snake-Game/src/snake.cpp"
+  "directory": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/PongGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\PongGame.dir\\src\\paddle.cpp.obj -c C:\\udacity_c++_nanodegree\\capstone_project\\CppND-Capstone-Pong-Game\\src\\paddle.cpp",
+  "file": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/src/paddle.cpp"
+},
+{
+  "directory": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/PongGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\PongGame.dir\\src\\ball.cpp.obj -c C:\\udacity_c++_nanodegree\\capstone_project\\CppND-Capstone-Pong-Game\\src\\ball.cpp",
+  "file": "C:/udacity_c++_nanodegree/capstone_project/CppND-Capstone-Pong-Game/src/ball.cpp"
 }
 ]

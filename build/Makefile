@@ -64,24 +64,13 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Snake-Game
+CMAKE_SOURCE_DIR = C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Pong-Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Snake-Game\build
+CMAKE_BINARY_DIR = C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Pong-Game\build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	"C:\Program Files\CMake\bin\cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -94,11 +83,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	"C:\Program Files\CMake\bin\cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Snake-Game\build\CMakeFiles C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Snake-Game\build\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Pong-Game\build\CMakeFiles C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Pong-Game\build\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Snake-Game\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Pong-Game\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -127,17 +127,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SnakeGame
+# Target rules for targets named PongGame
 
 # Build rule for target.
-SnakeGame: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 SnakeGame
-.PHONY : SnakeGame
+PongGame: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 PongGame
+.PHONY : PongGame
 
 # fast build rule for target.
-SnakeGame/fast:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/build
-.PHONY : SnakeGame/fast
+PongGame/fast:
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/build
+.PHONY : PongGame/fast
+
+src/ball.obj: src/ball.cpp.obj
+
+.PHONY : src/ball.obj
+
+# target to build an object file
+src/ball.cpp.obj:
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/ball.cpp.obj
+.PHONY : src/ball.cpp.obj
+
+src/ball.i: src/ball.cpp.i
+
+.PHONY : src/ball.i
+
+# target to preprocess a source file
+src/ball.cpp.i:
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/ball.cpp.i
+.PHONY : src/ball.cpp.i
+
+src/ball.s: src/ball.cpp.s
+
+.PHONY : src/ball.s
+
+# target to generate assembly for a file
+src/ball.cpp.s:
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/ball.cpp.s
+.PHONY : src/ball.cpp.s
 
 src/controller.obj: src/controller.cpp.obj
 
@@ -145,7 +172,7 @@ src/controller.obj: src/controller.cpp.obj
 
 # target to build an object file
 src/controller.cpp.obj:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/controller.cpp.obj
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/controller.cpp.obj
 .PHONY : src/controller.cpp.obj
 
 src/controller.i: src/controller.cpp.i
@@ -154,7 +181,7 @@ src/controller.i: src/controller.cpp.i
 
 # target to preprocess a source file
 src/controller.cpp.i:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/controller.cpp.i
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/controller.cpp.i
 .PHONY : src/controller.cpp.i
 
 src/controller.s: src/controller.cpp.s
@@ -163,7 +190,7 @@ src/controller.s: src/controller.cpp.s
 
 # target to generate assembly for a file
 src/controller.cpp.s:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/controller.cpp.s
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/controller.cpp.s
 .PHONY : src/controller.cpp.s
 
 src/game.obj: src/game.cpp.obj
@@ -172,7 +199,7 @@ src/game.obj: src/game.cpp.obj
 
 # target to build an object file
 src/game.cpp.obj:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/game.cpp.obj
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/game.cpp.obj
 .PHONY : src/game.cpp.obj
 
 src/game.i: src/game.cpp.i
@@ -181,7 +208,7 @@ src/game.i: src/game.cpp.i
 
 # target to preprocess a source file
 src/game.cpp.i:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/game.cpp.i
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/game.cpp.i
 .PHONY : src/game.cpp.i
 
 src/game.s: src/game.cpp.s
@@ -190,7 +217,7 @@ src/game.s: src/game.cpp.s
 
 # target to generate assembly for a file
 src/game.cpp.s:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/game.cpp.s
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
 
 src/main.obj: src/main.cpp.obj
@@ -199,7 +226,7 @@ src/main.obj: src/main.cpp.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/main.cpp.obj
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -208,7 +235,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -217,8 +244,35 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/paddle.obj: src/paddle.cpp.obj
+
+.PHONY : src/paddle.obj
+
+# target to build an object file
+src/paddle.cpp.obj:
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/paddle.cpp.obj
+.PHONY : src/paddle.cpp.obj
+
+src/paddle.i: src/paddle.cpp.i
+
+.PHONY : src/paddle.i
+
+# target to preprocess a source file
+src/paddle.cpp.i:
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/paddle.cpp.i
+.PHONY : src/paddle.cpp.i
+
+src/paddle.s: src/paddle.cpp.s
+
+.PHONY : src/paddle.s
+
+# target to generate assembly for a file
+src/paddle.cpp.s:
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/paddle.cpp.s
+.PHONY : src/paddle.cpp.s
 
 src/renderer.obj: src/renderer.cpp.obj
 
@@ -226,7 +280,7 @@ src/renderer.obj: src/renderer.cpp.obj
 
 # target to build an object file
 src/renderer.cpp.obj:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/renderer.cpp.obj
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/renderer.cpp.obj
 .PHONY : src/renderer.cpp.obj
 
 src/renderer.i: src/renderer.cpp.i
@@ -235,7 +289,7 @@ src/renderer.i: src/renderer.cpp.i
 
 # target to preprocess a source file
 src/renderer.cpp.i:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/renderer.cpp.i
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/renderer.cpp.i
 .PHONY : src/renderer.cpp.i
 
 src/renderer.s: src/renderer.cpp.s
@@ -244,35 +298,8 @@ src/renderer.s: src/renderer.cpp.s
 
 # target to generate assembly for a file
 src/renderer.cpp.s:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/renderer.cpp.s
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/src/renderer.cpp.s
 .PHONY : src/renderer.cpp.s
-
-src/snake.obj: src/snake.cpp.obj
-
-.PHONY : src/snake.obj
-
-# target to build an object file
-src/snake.cpp.obj:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/snake.cpp.obj
-.PHONY : src/snake.cpp.obj
-
-src/snake.i: src/snake.cpp.i
-
-.PHONY : src/snake.i
-
-# target to preprocess a source file
-src/snake.cpp.i:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/snake.cpp.i
-.PHONY : src/snake.cpp.i
-
-src/snake.s: src/snake.cpp.s
-
-.PHONY : src/snake.s
-
-# target to generate assembly for a file
-src/snake.cpp.s:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/snake.cpp.s
-.PHONY : src/snake.cpp.s
 
 # Help Target
 help:
@@ -282,7 +309,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... SnakeGame
+	@echo ... PongGame
+	@echo ... src/ball.obj
+	@echo ... src/ball.i
+	@echo ... src/ball.s
 	@echo ... src/controller.obj
 	@echo ... src/controller.i
 	@echo ... src/controller.s
@@ -292,12 +322,12 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/paddle.obj
+	@echo ... src/paddle.i
+	@echo ... src/paddle.s
 	@echo ... src/renderer.obj
 	@echo ... src/renderer.i
 	@echo ... src/renderer.s
-	@echo ... src/snake.obj
-	@echo ... src/snake.i
-	@echo ... src/snake.s
 .PHONY : help
 
 

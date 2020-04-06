@@ -60,16 +60,16 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Snake-Game
+CMAKE_SOURCE_DIR = C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Pong-Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Snake-Game\build
+CMAKE_BINARY_DIR = C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Pong-Game\build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SnakeGame.dir/all
+all: CMakeFiles/PongGame.dir/all
 
 .PHONY : all
 
@@ -79,36 +79,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SnakeGame.dir/clean
+clean: CMakeFiles/PongGame.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SnakeGame.dir
+# Target rules for target CMakeFiles/PongGame.dir
 
 # All Build rule for target.
-CMakeFiles/SnakeGame.dir/all:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/depend
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Snake-Game\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target SnakeGame"
-.PHONY : CMakeFiles/SnakeGame.dir/all
+CMakeFiles/PongGame.dir/all:
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/depend
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Pong-Game\build\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target PongGame"
+.PHONY : CMakeFiles/PongGame.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SnakeGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Snake-Game\build\CMakeFiles 6
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/SnakeGame.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Snake-Game\build\CMakeFiles 0
-.PHONY : CMakeFiles/SnakeGame.dir/rule
+CMakeFiles/PongGame.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Pong-Game\build\CMakeFiles 7
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/PongGame.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\udacity_c++_nanodegree\capstone_project\CppND-Capstone-Pong-Game\build\CMakeFiles 0
+.PHONY : CMakeFiles/PongGame.dir/rule
 
 # Convenience name for target.
-SnakeGame: CMakeFiles/SnakeGame.dir/rule
+PongGame: CMakeFiles/PongGame.dir/rule
 
-.PHONY : SnakeGame
+.PHONY : PongGame
 
 # clean rule for target.
-CMakeFiles/SnakeGame.dir/clean:
-	$(MAKE) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/clean
-.PHONY : CMakeFiles/SnakeGame.dir/clean
+CMakeFiles/PongGame.dir/clean:
+	$(MAKE) -f CMakeFiles\PongGame.dir\build.make CMakeFiles/PongGame.dir/clean
+.PHONY : CMakeFiles/PongGame.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
